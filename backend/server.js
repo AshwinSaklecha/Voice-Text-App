@@ -17,7 +17,11 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['https://voice-text-app.onrender.com', 'http://localhost:5173'],
+  origin: [
+    'https://voice-text-app-1.onrender.com',  // Your frontend URL
+    'https://voice-text-app.onrender.com',    // Your backend URL
+    'http://localhost:5173'                   // Local development
+  ],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Accept'],
   credentials: true
